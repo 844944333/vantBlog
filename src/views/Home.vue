@@ -17,7 +17,7 @@
           <van-icon name="close" class="popup_close" @click="showMore = false" />
         </div>
         <div class="popup_list">
-          <router-link to="/about" class="popup_list_item">
+          <router-link to="/" class="popup_list_item">
             <div @click="closeMore(0)" class="list_item_wrap">
               <div :class="{more_title: moreIndex === 0}">首页</div>
               <van-icon name="arrow" :class="{more_title: moreIndex === 0}" />
@@ -82,7 +82,7 @@ export default {
     }
     .home_popup {
       height: 100%;
-      width: 70%;
+      width: 65%;
       background: #efefef;
       .header_info_wrap {
         display: flex;

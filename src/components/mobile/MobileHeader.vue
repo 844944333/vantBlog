@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <div class="header">
-      <van-icon name="ellipsis" class="header_more" @click="more" ref="more"/>
+      <van-icon name="bars" class="header_more" @click="more" ref="more"/>
       <div class="header_info">
         <img class="logo" src="../../assets/images/-father.jpg" alt="">
         <span class="name">lnb_dev</span>
@@ -17,28 +17,13 @@
           <van-icon name="close" class="popup_close" @click="showMore = false" />
         </div>
         <div class="popup_list">
-          <router-link to="/" class="popup_list_item">
-            <div @click="closeMore(0)" class="list_item_wrap">
-              <div :class="{more_title: moreIndex === 0}">首页</div>
-              <van-icon name="arrow" :class="{more_title: moreIndex === 0}" />
-            </div>
-          </router-link>
-          <router-link to="/study" class="popup_list_item">
-            <div @click="closeMore(1)" class="list_item_wrap">
-              <div :class="{more_title: moreIndex === 1}">学习</div>
-              <van-icon name="arrow" :class="{more_title: moreIndex === 1}" />
-            </div>
-          </router-link>
-          <router-link to="/category" class="popup_list_item">
-            <div @click="closeMore(2)" class="list_item_wrap" :class="{more_title: moreIndex === 2}">
-              <div :class="{more_title: moreIndex === 2}">分类</div>
-              <van-icon name="arrow" :class="{more_title: moreIndex === 2}" />
-            </div>
-          </router-link>
-          <router-link to="/about" class="popup_list_item">
-            <div @click="closeMore(3)" class="list_item_wrap" :class="{more_title: moreIndex === 3}">
-              <div :class="{more_title: moreIndex === 3}">关于我</div>
-              <van-icon name="arrow" :class="{more_title: moreIndex === 3}" />
+          <router-link :to="`${item.link}`" v-for="(item, index) in bars" :key="index">
+            <div class="popup_list_wrap" @click="closeMore(index)">
+              <div class="wrap_info">
+                <van-icon :name="item.icon" size=".16rem" style="margin-right: .05rem" />
+                {{item.text}}
+              </div>
+              <van-icon name="arrow" />
             </div>
           </router-link>
         </div>
@@ -50,17 +35,48 @@
 <script>
 
 export default {
-  name: 'Home',
+  name: 'MobileHeader',
   data () {
     return {
       showMore: false,
-      moreIndex: 0
+      moreIndex: 0,
+      bars: [
+        {
+          icon: 'wap-home-o',
+          text: '首页',
+          link: '/'
+        },
+        {
+          icon: 'award-o',
+          text: '分类',
+          link: '/category'
+        },
+        {
+          icon: 'flag-o',
+          text: '学习',
+          link: '/study'
+        },
+        {
+          icon: 'cluster-o',
+          text: '技术文档',
+          link: '/technical'
+        },
+        {
+          icon: 'music-o',
+          text: '随笔',
+          link: '/life'
+        },
+        {
+          icon: 'info-o',
+          text: '关于',
+          link: '/about'
+        }
+      ]
     }
   },
   methods: {
     more () {
       this.showMore = true
-      this.$refs.more.style.fontSize = '.25rem'
     },
     closeMore (index) {
       this.showMore = false
@@ -109,17 +125,14 @@ export default {
       }
       .popup_list {
         padding: 0 .2rem;
-        .popup_list_item {
+        .popup_list_wrap {
           padding: .15rem 0;
           display: flex;
-          .list_item_wrap {
-            width: 100%;
+          align-items: center;
+          justify-content: space-between;
+          .wrap_info {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            .more_title {
-              font-weight: bold;
-            }
           }
         }
       }

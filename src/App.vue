@@ -56,5 +56,20 @@ html {
   /* 设置字体大小为 16px ---> font-size: .16rem */
   --themeColor: #006dfe;
 }
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-center {
+  justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
+}
+.justify-around {
+  justify-content: space-around;
+}
 
 </style>

@@ -3,14 +3,14 @@
     <div class="header">
       <van-icon name="ellipsis" class="header_more" @click="more" ref="more"/>
       <div class="header_info">
-        <img class="logo" src="@/assets/images/-father.jpg" alt="">
+        <img class="logo" src="../../assets/images/-father.jpg" alt="">
         <span class="name">lnb_dev</span>
       </div>
       <van-popup v-model="showMore" position="left" class="home_popup" >
         <div class="header_info_wrap">
           <router-link to="/">
             <div class="header_info" @click="toHome">
-              <img class="logo" src="@/assets/images/-father.jpg" alt="">
+              <img class="logo" src="../../assets/images/-father.jpg" alt="">
               <span class="name">lnb_dev</span>
             </div>
           </router-link>

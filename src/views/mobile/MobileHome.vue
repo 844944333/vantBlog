@@ -1,11 +1,11 @@
 <template>
   <div>
-    <MobileHome></MobileHome>
+    Home of Mobile
   </div>
 </template>
 
 <script>
-import MobileHome from '@/components/mobile/Header'
+// import MobileHeader from '@/components/mobile/MobileHeader'
 export default {
   data () {
     return {
@@ -13,7 +13,7 @@ export default {
     }
   },
   components: {
-    MobileHome
+    // MobileHeader
   }
 }
 </script>

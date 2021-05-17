@@ -1,5 +1,5 @@
 <template>
   <div>
-    e
+    About of Mobile
   </div>
 </template>

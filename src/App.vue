@@ -1,17 +1,25 @@
 <template>
   <div id="app">
-    <router-view v-if="showPage === 'mobile'" name="mobile"/>
+    <!-- pc -->
     <router-view v-if="showPage === 'pc'" name="pc"/>
+
+    <!-- mobile -->
+    <MobileHeader v-if="showPage === 'mobile'"></MobileHeader>
+    <router-view v-if="showPage === 'mobile'" name="mobile"/>
   </div>
 </template>
 
 <script>
+import MobileHeader from '@/components/mobile/MobileHeader'
 export default {
   name: 'app',
   data () {
     return {
       showPage: '',
     }
+  },
+  components: {
+    MobileHeader
   },
   created () {
     if (this._isMobile()) {

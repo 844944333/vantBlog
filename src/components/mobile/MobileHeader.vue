@@ -23,13 +23,13 @@
               <van-icon name="arrow" :class="{more_title: moreIndex === 0}" />
             </div>
           </router-link>
-          <router-link to="/" class="popup_list_item">
+          <router-link to="/study" class="popup_list_item">
             <div @click="closeMore(1)" class="list_item_wrap">
               <div :class="{more_title: moreIndex === 1}">学习</div>
               <van-icon name="arrow" :class="{more_title: moreIndex === 1}" />
             </div>
           </router-link>
-          <router-link to="/" class="popup_list_item">
+          <router-link to="/category" class="popup_list_item">
             <div @click="closeMore(2)" class="list_item_wrap" :class="{more_title: moreIndex === 2}">
               <div :class="{more_title: moreIndex === 2}">分类</div>
               <van-icon name="arrow" :class="{more_title: moreIndex === 2}" />

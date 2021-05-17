@@ -1,5 +1,7 @@
 <template>
-    <div>pc端</div>
+    <div>
+        Home of Pc
+    </div>
 </template>
 
 <script>

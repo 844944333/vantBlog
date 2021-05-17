@@ -17,16 +17,32 @@ const routes = [
     path: '/home',
     components: {
       default: () => import('@/views/mobile/MobileHome'),
-      pc: () => import('@/views/pc/PcHome'),
-      mobile: () => import('@/views/mobile/MobileHome')
+      mobile: () => import('@/views/mobile/MobileHome'),
+      pc: () => import('@/views/pc/PcHome')
+    }
+  },
+  {
+    path: '/study',
+    components: {
+      default: () => import('@/views/mobile/MobileStudy'),
+      mobile: () => import('@/views/mobile/MobileStudy'),
+      pc: () => import('@/views/pc/PcStudy')
+    }
+  },
+  {
+    path: '/category',
+    components: {
+      default: () => import('@/views/mobile/MobileCategory'),
+      mobile: () => import('@/views/mobile/MobileCategory'),
+      pc: () => import('@/views/pc/PcCategory')
     }
   },
   {
     path: '/about',
     components: {
       default: () => import('@/views/mobile/MobileAbout'),
-      pc: () => import('@/views/pc/PcAbout'),
-      mobile: () => import('@/views/mobile/MobileAbout')
+      mobile: () => import('@/views/mobile/MobileAbout'),
+      pc: () => import('@/views/pc/PcAbout')
     }
   }
 ]

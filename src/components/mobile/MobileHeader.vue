@@ -118,7 +118,7 @@ export default {
             align-items: center;
             justify-content: space-between;
             .more_title {
-              font-weight: 600;
+              font-weight: bold;
             }
           }
         }

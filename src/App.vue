@@ -52,9 +52,12 @@ html, body {
   font-size: .14rem;
 }
 html {
-  font-size: 100px !important;
   /* 设置字体大小为 16px ---> font-size: .16rem */
+  font-size: 100px !important;
   --themeColor: #006dfe;
+}
+a {
+  text-decoration: none;
 }
 .flex {
   display: flex;

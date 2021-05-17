@@ -1,15 +1,20 @@
 <template>
   <div class="home">
     Home of Mobile
+    <MobileFooter></MobileFooter>
   </div>
 </template>
 
 <script>
+import MobileFooter from "@/components/mobile/MobileFooter";
 export default {
   data () {
     return {
 
     }
+  },
+  components: {
+    MobileFooter
   }
 }
 </script>

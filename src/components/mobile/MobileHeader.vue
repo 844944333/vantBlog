@@ -23,7 +23,7 @@
                 <van-icon :name="item.icon" size=".16rem" style="margin-right: .05rem" />
                 {{item.text}}
               </div>
-              <van-icon name="arrow" />
+              <van-icon name="arrow" style="font-weight: 600" />
             </div>
           </router-link>
         </div>

@@ -44,6 +44,22 @@ const routes = [
       mobile: () => import('@/views/mobile/MobileAbout'),
       pc: () => import('@/views/pc/PcAbout')
     }
+  },
+  {
+    path: '/life',
+    components: {
+      default: () => import('@/views/mobile/MobileLife'),
+      mobile: () => import('@/views/mobile/MobileLife'),
+      pc: () => import('@/views/pc/PcLife')
+    }
+  },
+  {
+    path: '/technical',
+    components: {
+      default: () => import('@/views/mobile/MobileTechnical'),
+      mobile: () => import('@/views/mobile/MobileTechnical'),
+      pc: () => import('@/views/pc/PcTechnical')
+    }
   }
 ]
 // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')

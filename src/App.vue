@@ -5,7 +5,7 @@
 
     <!-- mobile -->
     <MobileHeader v-if="showPage === 'mobile'"></MobileHeader>
-    <router-view v-if="showPage === 'mobile'" name="mobile"/>
+    <router-view v-if="showPage === 'mobile'" name="mobile" />
   </div>
 </template>
 

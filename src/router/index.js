@@ -9,27 +9,18 @@ import VueRouter from 'vue-router'
 Vue.use(VueRouter)
 
 const routes = [
+  // {
+  //   path: '/',
+  //   redirect: '/'
+  // },
   {
     path: '/',
-    redirect: '/',
     components: {
       default: () => import('@/views/mobile/MobileHome'),
       mobile: () => import('@/views/mobile/MobileHome'),
       pc: () => import('@/views/pc/PcHome')
     }
   },
-  // {
-  //   path: '/',
-  //   redirect: '/home'
-  // },
-  // {
-  //   path: '/home',
-  //   components: {
-  //     default: () => import('@/views/mobile/MobileHome'),
-  //     mobile: () => import('@/views/mobile/MobileHome'),
-  //     pc: () => import('@/views/pc/PcHome')
-  //   }
-  // },
   {
     path: '/study',
     components: {

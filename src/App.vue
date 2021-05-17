@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <router-view v-if="showPage === 'mobile'"/>
-    <div v-if="showPage === 'pc'">dddd</div>
+    <router-view v-if="showPage === 'mobile'" name="mobile"/>
+    <router-view v-if="showPage === 'pc'" name="pc"/>
   </div>
 </template>
 

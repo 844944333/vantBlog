@@ -1,6 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+/* mobile */
+// import MobileHome from '../views/mobile/Home.vue'
+
+/* pc */
+// import PcHome from '../views/pc/PcHome.vue'
 
 Vue.use(VueRouter)
 
@@ -11,8 +15,19 @@ const routes = [
   },
   {
     path: '/home',
-    name: 'Home',
-    component: Home
+    components: {
+      default: () => import('@/views/mobile/MobileHome'),
+      pc: () => import('@/views/pc/PcHome'),
+      mobile: () => import('@/views/mobile/MobileHome')
+    }
+  },
+  {
+    path: '/about',
+    components: {
+      default: () => import('@/views/mobile/MobileAbout'),
+      pc: () => import('@/views/pc/PcAbout'),
+      mobile: () => import('@/views/mobile/MobileAbout')
+    }
   }
 ]
 // component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')

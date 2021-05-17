@@ -35,6 +35,12 @@
               <van-icon name="arrow" :class="{more_title: moreIndex === 2}" />
             </div>
           </router-link>
+          <router-link to="/about" class="popup_list_item">
+            <div @click="closeMore(3)" class="list_item_wrap" :class="{more_title: moreIndex === 3}">
+              <div :class="{more_title: moreIndex === 3}">关于我</div>
+              <van-icon name="arrow" :class="{more_title: moreIndex === 3}" />
+            </div>
+          </router-link>
         </div>
       </van-popup>
     </div>

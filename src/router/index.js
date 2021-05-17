@@ -11,16 +11,25 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    redirect: '/home'
-  },
-  {
-    path: '/home',
+    redirect: '/home',
     components: {
       default: () => import('@/views/mobile/MobileHome'),
       mobile: () => import('@/views/mobile/MobileHome'),
       pc: () => import('@/views/pc/PcHome')
     }
   },
+  // {
+  //   path: '/',
+  //   redirect: '/home'
+  // },
+  // {
+  //   path: '/home',
+  //   components: {
+  //     default: () => import('@/views/mobile/MobileHome'),
+  //     mobile: () => import('@/views/mobile/MobileHome'),
+  //     pc: () => import('@/views/pc/PcHome')
+  //   }
+  // },
   {
     path: '/study',
     components: {

@@ -1,6 +1,12 @@
 <template>
-  <div class="home">
-    Home of Mobile
+  <div>
+    <div class="home">
+      Home of Mobile
+
+
+
+
+    </div>
     <MobileFooter></MobileFooter>
   </div>
 </template>

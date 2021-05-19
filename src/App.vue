@@ -56,6 +56,13 @@ html {
   font-size: 100px !important;
   --themeColor: #006dfe;
 }
+@font-face{
+  font-family: font;
+  src: url("./assets/font/JetBrainsMono-Regular.ttf");
+}
+.font {
+  font-family: font;
+}
 a {
   text-decoration: none;
 }

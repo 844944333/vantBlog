@@ -1,17 +1,22 @@
 <template>
   <div class="home">
     <div class="header">
-      <van-icon name="bars" class="header_more" @click="more" ref="more"/>
-      <div class="header_info">
-        <img class="logo" src="../../assets/images/-father.jpg" alt="">
-        <span class="name">lnb_dev</span>
+      <div class="left">
+        <van-icon name="bars" class="header_more" @click="more" ref="more"/>
+        <div class="header_info">
+          <img class="logo" src="../../assets/images/-father.jpg" alt="">
+          <span class="name font">lnb_dev</span>
+        </div>
       </div>
+
+
+
       <van-popup v-model="showMore" position="left" class="home_popup" >
         <div class="header_info_wrap">
           <router-link to="/">
             <div class="header_info" @click="toHome">
               <img class="logo" src="../../assets/images/-father.jpg" alt="">
-              <span class="name">lnb_dev</span>
+              <span class="name font">lnb_dev</span>
             </div>
           </router-link>
           <van-icon name="close" class="popup_close" @click="showMore = false" />
@@ -33,7 +38,6 @@
 </template>
 
 <script>
-
 export default {
   name: 'MobileHeader',
   data () {
@@ -74,6 +78,9 @@ export default {
       ]
     }
   },
+  mounted() {
+
+  },
   methods: {
     more () {
       this.showMore = true
@@ -87,6 +94,7 @@ export default {
       //   path: '/'
       // })
     }
+
   }
 }
 </script>
@@ -97,10 +105,16 @@ export default {
     padding: 0 .1rem;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     background: #fff;
     height: .6rem;
+    .left {
+      display: flex;
+      align-items: center;
+    }
+
     .header_more {
-      font-size: .25rem;
+      font-size: .24rem;
     }
     .home_popup {
       height: 100%;
@@ -156,4 +170,7 @@ export default {
     color: var(--themeColor);
   }
 }
+
+
+
 </style>

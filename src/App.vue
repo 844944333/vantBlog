@@ -59,6 +59,8 @@ html {
 @font-face{
   font-family: font;
   src: url("./assets/font/JetBrainsMono-Regular.ttf");
+  /* swap: 如果设定的字体还未加载完成，浏览器将首先使用备用字体显示， 当设定的字体加载完成时替换备用字体 */
+  font-display: swap;
 }
 .font {
   font-family: font;
